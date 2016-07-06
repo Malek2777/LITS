@@ -1,0 +1,74 @@
+
+
+header {
+  margin: 15px;
+  height: 85px;
+  border: 2px solid black;
+  padding: 15px;
+}
+
+.logo, .user {
+  padding: 0px;
+}
+
+.logo img {
+  max-height: 50px;
+  max-width: 330px;
+  width: 100%;
+}
+
+.search input {
+
+}
+
+
+
+.user img {
+  max-height: 50px;
+  float: right;
+
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.user-name {
+  margin: 0 15px;
+}
+
+aside {
+  margin: 15px;
+}
+
+.banner {
+  height: 50px;
+  width: 50%;
+  background: red;
+  margin: 0 auto;
+}
+
+article {
+  margin: 10px 0px;
+  height: 450px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+article img {
+  max-height: 200px;
+  height: auto;
+  width: 100%;
+}
+
+article p, h3, date {
+  padding: 5px;
+}
+
+@media (max-width: 425px) {
+  .banner {
+    width: 100%;
+  }
+}
