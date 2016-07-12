@@ -1,86 +1,119 @@
 body {
   background: url(56df0c2d.png);
+  color: #656565;
   font-family: 'Fjalla One', sans-serif; }
 
-.container {
-  margin-top: 150px;
-  width: 500px; }
+/*------------------------------------*\
+  #CALENDAR-BASE
+\*------------------------------------*/
+.calendar {
+  margin: 0 auto;
+  width: 455px; }
 
-.header {
-  background: #f94e4e;
-  z-index: 1;
-  font-size: 30px;
+.calendar__header,
+.calendar__footer {
   text-align: center;
-  border-radius: 15px 15px 0 0;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  color: #fff;
+  text-transform: uppercase; }
+
+.calendar__header_month-name,
+.calendar__content_day,
+.calendar__footer_day-name {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+/*------------------------------------*\
+  #BLOCK-CALENDAR-HEADER
+\*------------------------------------*/
+/* Header */
+.calendar__header {
+  max-height: 70px;
   padding-bottom: 15px;
   padding-top: 15px;
-  text-transform: uppercase; }
+  border-radius: 15px 15px 0 0;
+  background: #f94e4e;
+  color: #fff;
+  font-size: 30px;
+  z-index: 1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+
+.calendar__header_month-name {
+  width: 390px; }
+
+/*------------------------------------*\
+  #BLOCK-CALENDAR-CONTENT
+\*------------------------------------*/
+/* Content */
+.calendar__content {
+  display: inline-block;
+  padding: 0;
+  border-radius: 0 0 15px 15px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+
+.calendar__content_day {
+  position: relative;
+  display: block;
+  float: left;
+  width: 65px;
+  height: 65px;
+  padding: 18px;
+  font-size: 20px;
+  text-align: center; }
+
+.calendar__content_day:nth-child(2n+1) {
+  background: #efefef; }
+
+.calendar__content_day--selected span {
+  display: inherit;
+  border-radius: 50px;
+  background-color: #f94e4e;
+  color: #fff; }
+
+.calendar__content_day--marked::before {
+  content: "\e044";
+  display: flex;
+  position: absolute;
+  top: 1px;
+  right: 5px;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  font-size: 2rem;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: #f94e4e; }
+
+/*------------------------------------*\
+  #BLOCK-CALENDAR-FOOTER
+\*------------------------------------*/
+/* Footer */
+.calendar__footer {
+  margin-top: 15px;
+  border-radius: 15px;
+  border: none;
+  background: #fff;
+  font-size: 20px;
+  color: #f94e4e;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+
+.calendar__footer_day-name {
+  width: 60px;
+  height: 21px; }
+
+/*------------------------------------*\
+  #BLOCK-GYLPICON-BASE
+\*------------------------------------*/
+.glyphicon {
+  top: 5px; }
 
 .glyphicon-menu-left {
   float: left; }
 
 .glyphicon-menu-right {
   float: right; }
-
-.content {
-  display: inline-block;
-  border-radius: 0 0 15px 15px;
-  padding: 0;
-  overflow: hidden;
-  background: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
-
-.day {
-  position: relative;
-  min-width: 67px;
-  display: block;
-  font-size: 20px;
-  padding: 20px;
-  float: left;
-  text-align: center; }
-
-.day:nth-child(2n+1) {
-  background: #efefef; }
-
-.day.selected {
-  background-image: url(select.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  color: #fff; }
-
-.marked::before {
-  content: "\e044";
-  position: absolute;
-  top: 1px;
-  right: 5px;
-  display: flex;
-  font-family: 'Glyphicons Halflings';
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1;
-  font-size: 2rem;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #f94e4e; }
-
-.glyphicon {
-  top: 5px; }
-
-.footer {
-  text-align: center;
-  font-size: 20px;
-  border: none;
-  text-transform: uppercase;
-  color: #f94e4e;
-  margin-top: 15px;
-  border-radius: 15px;
-  background: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
-
-.dayName {
-  min-width: 61px;
-  display: inline-block; }
 
 /*# sourceMappingURL=style.css.map */
